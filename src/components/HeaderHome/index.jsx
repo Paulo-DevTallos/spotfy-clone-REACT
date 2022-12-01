@@ -1,5 +1,10 @@
+import { Header, Logo } from "./style"
+import logo from '../../assets/img/spotify-logo.png'
+
 export const HeaderHome = () => (
-	<header>
-		header da pagina
-	</header>
+	<Header>
+		<Logo>
+			<img src={logo} alt="logo spotify" />
+		</Logo>
+	</Header>
 )
