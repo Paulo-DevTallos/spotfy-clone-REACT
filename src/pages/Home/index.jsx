@@ -1,11 +1,12 @@
 import { createUseStyles } from "react-jss"
-import { Banner, ContainerImg, Content, PremiumRewardsSection } from './style'
+import { Banner, ContainerImg, Content, PremiumRewardsSection, TitleArtist } from './style'
 import { HeaderHome } from "../../components/HeaderHome";
 import { Button } from "../../components/Button";
 import PremiumRewards from "../../constants/PremiumRewards";
 
 
 import bannerImg from '../../assets/img/banner-home.jpg'
+import { MorePlayed } from "../../constants/MorePlayedArtists";
 
 //styles to change buttons variations
 const useStyles = createUseStyles({
@@ -16,7 +17,10 @@ const useStyles = createUseStyles({
 	bgButtonOutlined: {
 		backgroundColor: 'transparent',
 		border: '2px solid #fff',
-	}
+	},
+	bgArtist: {
+		backgroundColor: '#efefef',
+	},
 })
 
 export const Home = () => {
@@ -46,6 +50,23 @@ export const Home = () => {
 						<img src={bannerImg} alt="banner da home" />
 					</ContainerImg>
 				</Banner>
+				<PremiumRewardsSection className={classes.bgArtist}>
+					<header>
+						<h2>As mais tocadas de 2022 no Brasil.</h2>
+						<span>Escute às faixas principais sem anúncios e no modo offline com Premium.</span>
+						<ul>
+							{
+								MorePlayed.map((artist) => (
+									<li key={artist.image}>
+										<img src={artist.image} alt="imagem" />
+										<TitleArtist><strong>{artist.title}</strong> mais {artist.subtitle}</TitleArtist>
+										<small>{artist.artist}</small>
+									</li>
+								))
+							}
+						</ul>
+					</header>
+				</PremiumRewardsSection>
 				<PremiumRewardsSection>
 					<header><h2>Por que ser Premium?</h2></header>
 					<div>

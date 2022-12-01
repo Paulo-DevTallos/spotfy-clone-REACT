@@ -52,16 +52,23 @@ export const ContainerImg = styled.div`
 export const PremiumRewardsSection = styled.section`
 	font-family: 'Circular Spotify Tx T Black';
 	text-align: center;
-	padding: 0px 80px;
-	margin-bottom: 5rem;
+	padding: 5rem 80px;
+
 	h2{
-		margin-top: 3.5rem;
-		margin-bottom: 3.5rem;
 		font-size: 2.5rem;
+		margin-bottom: 15px;
 	}
+
+	span {
+		font-family: gothem, Arial, Helvetica, sans-serif;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+
 	ul{
 		display: flex;
 		justify-content: center;
+		margin-top: 3.5rem;
 
 		li{
 			width: 25%;
@@ -69,19 +76,28 @@ export const PremiumRewardsSection = styled.section`
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+
+			img{
+				width: 142px;
+				height: 142px;
+			}
+
 			h3{
 				margin-top: 3rem;
 				font-size: 21px;
 			}
+
 			small{
 				margin-top: 1rem;
 				font-family: gothem, Arial, Helvetica, sans-serif;
 				font-size: 16px;
+				padding: 0 70px;
 			}
 		}
 	}
-	img{
-		width: 142px;
-		height: 142px;
-	}
+`
+
+export const TitleArtist = styled.h3`
+	font-weight: 100;
+	font-family: gothem, Arial, Helvetica, sans-serif;
 `
