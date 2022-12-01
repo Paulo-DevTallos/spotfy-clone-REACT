@@ -1,18 +1,8 @@
 import { ContainerBtn } from "./style"
 
-import { createUseStyles } from "react-jss"
-
-const useStyles = createUseStyles({
-	bgButton: {
-		backgroundColor: 'red',
-	}
-})
-
-export const Button = ({ children }) => {
-	const classes = useStyles()
-
+export const Button = ({ children, styleBtn }) => {
 	return(
-		<ContainerBtn className={classes.bgButton}>
+		<ContainerBtn className={styleBtn}>
 			{ children }
 		</ContainerBtn>
 	)

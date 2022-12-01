@@ -28,6 +28,16 @@ export const Content = styled.div`
 		font-size: 1.4rem;
 		margin: 30px 0;
 	}
+
+	> div {
+		margin-bottom: 30px;
+	}
+
+	small {
+		font-size: 10px;
+		line-height: 1.8;
+		font-weight: 500;
+	}
 `
 
 export const ContainerImg = styled.div`
