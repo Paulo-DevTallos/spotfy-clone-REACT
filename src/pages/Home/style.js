@@ -74,7 +74,7 @@ export const PremiumRewardsSection = styled.section`
 			width: 25%;
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: flex-start;
 			align-items: center;
 
 			img{
