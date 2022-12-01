@@ -1,7 +1,9 @@
 import { createUseStyles } from "react-jss"
-import { Banner, ContainerImg, Content } from './style'
+import { Banner, ContainerImg, Content, PremiumRewardsSection } from './style'
 import { HeaderHome } from "../../components/HeaderHome";
 import { Button } from "../../components/Button";
+import PremiumRewards from "../../constants/PremiumRewards";
+
 
 import bannerImg from '../../assets/img/banner-home.jpg'
 
@@ -20,7 +22,7 @@ const useStyles = createUseStyles({
 export const Home = () => {
 	const classes = useStyles()
 
-	return(
+	return (
 		<>
 			<HeaderHome />
 			<main>
@@ -37,13 +39,29 @@ export const Home = () => {
 							</Button>
 						</div>
 						<small>
-						Somente no plano Individual. Depois, é só R$ 19,90/mês. Sujeito a Termos e Condições. Disponível apenas para quem nunca<br/> usou o Premium. A oferta termina em 31/12/2022.
+							Somente no plano Individual. Depois, é só R$ 19,90/mês. Sujeito a Termos e Condições. Disponível apenas para quem nunca<br /> usou o Premium. A oferta termina em 31/12/2022.
 						</small>
 					</Content>
 					<ContainerImg>
 						<img src={bannerImg} alt="banner da home" />
 					</ContainerImg>
 				</Banner>
+				<PremiumRewardsSection>
+					<header><h2>Por que ser Premium?</h2></header>
+					<div>
+						<ul>
+							{
+								PremiumRewards.map((element) => (
+									<li key={element.imageIcon}>
+										<img src={element.imageIcon} alt="imagem" />
+										<h3>{element.title}</h3>
+										<small>{element.subTitle}</small>
+									</li>)
+								)
+							}
+						</ul>
+					</div>
+				</PremiumRewardsSection>
 			</main>
 		</>
 	)
