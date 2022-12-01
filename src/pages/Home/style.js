@@ -48,3 +48,40 @@ export const ContainerImg = styled.div`
 		width: 98%;
 	}
 `
+
+export const PremiumRewardsSection = styled.section`
+	font-family: 'Circular Spotify Tx T Black';
+	text-align: center;
+	padding: 0px 80px;
+	margin-bottom: 5rem;
+	h2{
+		margin-top: 3.5rem;
+		margin-bottom: 3.5rem;
+		font-size: 2.5rem;
+	}
+	ul{
+		display: flex;
+		justify-content: center;
+
+		li{
+			width: 25%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			h3{
+				margin-top: 3rem;
+				font-size: 21px;
+			}
+			small{
+				margin-top: 1rem;
+				font-family: gothem, Arial, Helvetica, sans-serif;
+				font-size: 16px;
+			}
+		}
+	}
+	img{
+		width: 142px;
+		height: 142px;
+	}
+`
