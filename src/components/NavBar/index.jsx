@@ -1,8 +1,9 @@
+import { NavMenu } from "./style";
 import { Link } from "react-router-dom";
 
 export const NavBar = () => (
 	<nav>
-		<ul>
+		<NavMenu>
 			<li>
 				<Link to="#">Premium</Link>
 			</li>
@@ -12,6 +13,12 @@ export const NavBar = () => (
 			<li>
 				<Link to="#">Baixar</Link>
 			</li>
-		</ul>
+			<li>
+				<Link to="#">Inscrever-se</Link>
+			</li>
+			<li>
+			<Link to="#">Entrar</Link>
+			</li>
+		</NavMenu>
 	</nav>
 )
